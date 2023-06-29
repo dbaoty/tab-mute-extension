@@ -45,6 +45,10 @@ chrome.tabs.onActivated.addListener(() => {
     toggleMute();
 });
 
+chrome.tabs.onUpdated.addListener(() => {
+    toggleMute();
+});
+
 chrome.tabs.onCreated.addListener(() => {
     collectAudibleTabs();
 });
